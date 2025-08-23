@@ -6,8 +6,11 @@ const REDIRECT_URI = process.env.GMAIL_REDIRECT_URI || "http://localhost:3000/ap
 
 export async function POST(request: NextRequest) {
   try {
+    console.log("Gmail OAuth endpoint called - VERSION 2.0")
+    
     // Check if Gmail OAuth credentials are available
     if (!GMAIL_CLIENT_ID) {
+      console.log("Gmail OAuth credentials not configured")
       return NextResponse.json(
         { error: "Gmail OAuth credentials not configured" },
         { status: 500 }
@@ -15,6 +18,7 @@ export async function POST(request: NextRequest) {
     }
 
     const { email } = await request.json()
+    console.log("Processing OAuth request for email:", email)
 
     // Gmail OAuth scopes for reading emails
     const scopes = [
@@ -41,6 +45,8 @@ export async function POST(request: NextRequest) {
       message: "Redirect user to this URL for Gmail OAuth",
       clientId: GMAIL_CLIENT_ID,
       scopes: scopes.split(" "),
+      version: "2.0",
+      endpoint: "/api/gmail/gmail-oauth"
     })
   } catch (error) {
     console.error("Gmail OAuth error:", error)
