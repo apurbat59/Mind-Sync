@@ -2,7 +2,7 @@ import { type NextRequest, NextResponse } from "next/server"
 
 // Gmail OAuth configuration from environment variables
 const GMAIL_CLIENT_ID = process.env.GMAIL_CLIENT_ID
-const REDIRECT_URI = process.env.GMAIL_REDIRECT_URI || "http://localhost:3000/api/gmail-callback"
+const REDIRECT_URI = process.env.GMAIL_REDIRECT_URI || "http://localhost:3000/api/gmail/gmail-callback"
 
 export async function POST(request: NextRequest) {
   try {

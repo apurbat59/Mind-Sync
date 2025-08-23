@@ -51,7 +51,7 @@ export default function GmailConnector({ userEmail, onEmailsLoaded, onConnection
 
   const verifyConnection = async (token: string) => {
     try {
-      const response = await fetch(`/api/gmail-sync-real?accessToken=${token}`)
+      const response = await fetch(`/api/gmail/gmail-sync-real?accessToken=${token}`)
       const data = await response.json()
 
       if (data.connected) {
@@ -101,7 +101,7 @@ export default function GmailConnector({ userEmail, onEmailsLoaded, onConnection
     setConnectionError(null)
 
     try {
-      const response = await fetch("/api/gmail-oauth", {
+      const response = await fetch("/api/gmail/gmail-oauth", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -137,7 +137,7 @@ export default function GmailConnector({ userEmail, onEmailsLoaded, onConnection
     try {
       console.log("Starting Gmail sync...")
 
-      const response = await fetch("/api/gmail-sync-real", {
+      const response = await fetch("/api/gmail/gmail-sync-real", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
