@@ -21,9 +21,9 @@ import {
   FileText,
   ChevronDown,
 } from "lucide-react"
-import AuthModal from "@/components/auth-modal"
+import AuthModal from "@/components/auth/auth-modal"
 import { useRouter } from "next/navigation"
-import UserManagement from "@/components/user-management"
+import UserManagement from "@/components/auth/user-management"
 
 export default function LandingPage() {
   const [isAuthOpen, setIsAuthOpen] = useState(false)
