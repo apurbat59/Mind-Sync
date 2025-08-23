@@ -22,14 +22,14 @@ import {
   MessageCircle,
   Sparkles,
 } from "lucide-react"
-import VoiceCapture from "@/components/voice-capture"
-import EnhancedMemorySearch from "@/components/enhanced-memory-search"
-import MemoryIngestion from "@/components/memory-ingestion"
-import MemoryTimeline from "@/components/memory-timeline"
-import DigestGenerator from "@/components/digest-generator"
-import MemoryGraphs from "@/components/memory-graphs"
-import AIChatbot from "@/components/ai-chatbot"
-import GmailConnector from "@/components/gmail-connector"
+import VoiceCapture from "@/components/memory/voice-capture"
+import EnhancedMemorySearch from "@/components/memory/enhanced-memory-search"
+import MemoryIngestion from "@/components/memory/memory-ingestion"
+import MemoryTimeline from "@/components/memory/memory-timeline"
+import DigestGenerator from "@/components/gmail/digest-generator"
+import MemoryGraphs from "@/components/memory/memory-graphs"
+import AIChatbot from "@/components/ai/ai-chatbot"
+import GmailConnector from "@/components/gmail/gmail-connector"
 
 interface MemoryBlock {
   id: string
