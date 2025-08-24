@@ -74,7 +74,7 @@ export default function AIChatbot({ memories, userEmail }: AIChatbotProps) {
         .map((m) => `${m.source}: ${m.content}`)
         .join("\n\n")
 
-      const response = await fetch("/api/chat-gemini", {
+      const response = await fetch("/api/ai/chat-gemini", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
