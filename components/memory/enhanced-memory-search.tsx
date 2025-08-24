@@ -111,7 +111,7 @@ export default function EnhancedMemorySearch({ memories }: EnhancedMemorySearchP
         .map((r) => `[${r.memory.timestamp.toLocaleDateString()}] ${r.memory.source}: ${r.memory.content}`)
         .join("\n\n")
 
-      const response = await fetch("/api/chat", {
+      const response = await fetch("/api/ai/chat", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -141,7 +141,7 @@ export default function EnhancedMemorySearch({ memories }: EnhancedMemorySearchP
 
     try {
       // Use RAG-enhanced search
-      const response = await fetch("/api/rag-chat", {
+      const response = await fetch("/api/ai/rag-chat", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

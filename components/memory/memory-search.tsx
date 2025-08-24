@@ -138,7 +138,7 @@ export default function MemorySearch({ memories }: MemorySearchProps) {
         .map((r) => `[${r.memory.timestamp.toLocaleDateString()}] ${r.memory.source}: ${r.memory.content}`)
         .join("\n\n")
 
-      const response = await fetch("/api/chat", {
+      const response = await fetch("/api/ai/chat", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
