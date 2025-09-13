@@ -1,6 +1,6 @@
 # MindSync App
 
-A Next.js application for personal memory management and AI-powered email assistance.
+A React.js application for personal memory management and AI-powered email assistance.
 
 ## 📁 Project Structure
 
